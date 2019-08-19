@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>跳转中...</title>
+</head>
+
+<body>
+  <script src="oidc-client.js"></script>
+  <script>
+
+new Oidc.UserManager()
+  .signinRedirectCallback()
+  .then(function() {
+    window.location = "/#/Home";
+  })
+  .catch(function(e) {
+    console.log(e)
+  });
+
+  </script>
+</body>
+
+</html>

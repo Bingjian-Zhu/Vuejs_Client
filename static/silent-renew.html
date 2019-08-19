@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>通过SpeEDI Cargo自动更新token</title>
+</head>
+<body>
+    <script src='oidc-client.js'></script>
+    <script>        
+        new Oidc.UserManager().signinSilentCallback()
+        .catch((err)=>{
+            console.log(err)
+        });
+    </script>
+</body>
+</html>
